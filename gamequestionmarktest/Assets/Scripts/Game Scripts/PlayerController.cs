@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         
         if(Input.GetKeyDown(KeyCode.S))
         {
-            playerRb.AddForce(Vector2.down * Time.deltaTime * jumpForce * 500, ForceMode.Impulse);
+            playerRb.AddForce(Vector2.down * Time.deltaTime * jumpForce * 100000 * Time.deltaTime, ForceMode.Impulse);
         }
 
         CheckJump();

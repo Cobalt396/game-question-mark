@@ -5,14 +5,14 @@ using UnityEngine.EventSystems;
 
 public class UIController : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
-    public GameObject TasksWithLit;
-    public GameObject TasksWithoutLit;
+    public GameObject UnselectedItem;
+    public GameObject SelectedItem;
     public EventSystem UIEventSystem;
     
     // Start is called before the first frame update
     void Start()
     {
-        TasksWithLit.SetActive(false);
+        SelectedItem.SetActive(false);
     }
 
     // Update is called once per frame
@@ -23,12 +23,12 @@ public class UIController : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
-        TasksWithLit.SetActive(true);
+        SelectedItem.SetActive(true);
     }
 
     void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
     {
-        TasksWithLit.SetActive(false);
+        SelectedItem.SetActive(false);
     }
 
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
