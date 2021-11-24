@@ -1,0 +1,4 @@
+Sprite Order:
+-5 to 5: Sprites
+-5 to -15: Background Assets
+-15: Background
